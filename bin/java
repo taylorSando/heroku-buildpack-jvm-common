@@ -191,6 +191,9 @@ _install_tools() {
   local ctxDir=${1:-BUILD_DIR}
   local curDir=${JVM_COMMON_DIR:-$(cd $(dirname ${BASH_SOURCE[0]}) && cd .. && pwd )}
 
+  echo "Doing more stuff"
+  echo $curDir
+
   mkdir -p $ctxDir/.startup
   cp $curDir/opt/with_jmap $ctxDir/.startup/with_jmap
   chmod +x $ctxDir/.startup/with_jmap
